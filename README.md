@@ -1,8 +1,8 @@
 ## Projeto de automação de teste com Ruby, Cucumber e o framework capybara ##
 
-Esse repositório contém um projeto de automação de testes que roda 2 features no site https://www.demoblaze.com/, são elas:
+Esse repositório contém um projeto de automação de testes que roda 3 features no site https://www.demoblaze.com/, são elas:
 
-1) "criacao_conta.feature" - testes realizados na sessão  'Sign Up' d
+1) "criacao_conta.feature" - testes realizados na sessão  'Sign Up' 
 2) "carrinho_compras.feature" - testes na funcionalidade do carrinho de compras
 3) "login.feature" - testes realizados na tela de login contendo cenários positivos e negativos.
 
