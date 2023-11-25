@@ -137,7 +137,7 @@ cucumber -t@login -p hmg -p headless
 
 ### Analisando relatório ###
 
-Temos como acompanhar o relátório de andamento dos testes para ver o que passou e o que falhou. O arquivo .html se encontra em /results/report.html
+Temos como acompanhar o relatório de andamento dos testes para ver o que passou e o que falhou. O arquivo .html se encontra em /results/report.html
 
 ![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/758d0fc3-faf7-4397-91ad-316f6e06781e)
  
