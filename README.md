@@ -8,10 +8,14 @@ Esse repositório contém um projeto de automação de testes que roda 2 feature
 
 ### Instalação do ruby e dependências no Windows ###
 
-Caso não tenha o ruby instalado no windows é só seguir o passo a passo:
-```shell
+Caso não tenha o ruby instalado no windows é só seguir o passo a passo dos tutoriais:
+
 https://ftstblog.wordpress.com/2018/03/27/cucumber-configuracao-windows/
-```
+
+OU também
+
+https://papito.medium.com/instalando-ruby-cucumber-e-capybara-no-windows-10-acb1fe833a95
+
 
 ### Instalação do Rbenv e dependências no Ubuntu ou qualquer outro baseado no Debian ###
 
