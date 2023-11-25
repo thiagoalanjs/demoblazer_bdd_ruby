@@ -11,11 +11,11 @@ Então('verifico a mensagem {string} no menu') do |wellcome_message|
 end
 
 Dado('digito {string} inválido') do |username|
-    login.field_username.set username
+    login.field_login_username.set username
 end
 
 Dado('digito {string} inválida') do |password|
-    login.field_password.set password
+    login.field_login_password.set password
 end
 
 Dado('clico no botão Log in') do

@@ -1,21 +1,12 @@
 ## Projeto de automação de teste com Ruby, Cucumber e o framework capybara ##
 
-Esse repositório contém um projeto de automação de testes que roda 3 features no site https://www.demoblaze.com/, são elas:
-
-1) "criacao_conta.feature" - testes realizados na sessão  'Sign Up' 
-2) "carrinho_compras.feature" - testes na funcionalidade do carrinho de compras
-3) "login.feature" - testes realizados na tela de login contendo cenários positivos e negativos.
 
 ### Instalação do ruby e dependências no Windows ###
 
-Caso não tenha o ruby instalado no windows é só seguir o passo a passo dos tutoriais:
-
+Seguir o passo a passo: 
+```shell
 https://ftstblog.wordpress.com/2018/03/27/cucumber-configuracao-windows/
-
-OU também
-
-https://papito.medium.com/instalando-ruby-cucumber-e-capybara-no-windows-10-acb1fe833a95
-
+```
 
 ### Instalação do Rbenv e dependências no Ubuntu ou qualquer outro baseado no Debian ###
 
@@ -23,7 +14,7 @@ https://papito.medium.com/instalando-ruby-cucumber-e-capybara-no-windows-10-acb1
 ```shell
 sudo apt update
 ```
-2) Rodar o comando instalação das dependencias
+2) Rodar o comando intalação das dependencias
 ```shell
 sudo apt install git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
 ```
@@ -31,7 +22,7 @@ sudo apt install git curl autoconf bison build-essential libssl-dev libyaml-dev 
 ```shell
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
 ```
-4) Executar os comandos abaixo para configuração e path
+4) Executar os comandos abaixo e ver
 
 ```shell
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
@@ -42,17 +33,17 @@ source ~/.bashrc
 ```shell
 rbenv -v
 ```
-6) Para instalação do ruby devemos ver antes as versões disponíveis 
+6) Para instalação do ruby devemos ver as versões disponíveis 
 ```shell
 rbenv install -l
 ```
-7) Escolher uma versão por exemplo 2.7.7 (estou rodando essa nesse projeto :))
+7) Escolher uma versão por exemplo 3.0.6
 ```shell
-rbenv install 2.7.7
+rbenv install 3.0.6
 ```
 8) Deixando a versão disponível no projeto ou pasta da aplicação
 ```shell
-rbenv local 2.7.7
+rbenv local 3.0.6
 ```
 9) Verificando a se a instalação deu certo
 ```shell
@@ -60,7 +51,7 @@ ruby --version
 
 RESULTADO
 
-ruby 2.7.7p221 (2022-11-24 revision 168ec2b1e5) [x86_64-linux]
+ruby 3.0.6p216 (2023-03-30 revision 23a532679b) [x86_64-linux]
 ```
 
 #### Executando o projeto ####
@@ -122,37 +113,50 @@ Bundle complete! 9 Gemfile dependencies, 50 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
 ```
 
-2) Devemos baixar também o chromedriver no site https://chromedriver.chromium.org/downloads e após descompactar o arquivo deverá ficar na pasta /usr/local/bin/
+2) Devemos deixar baixar também a o chromedriver no site https://chromedriver.chromium.org/downloads, após descompactar o arquivo deverá ficar na pasta /usr/local/bin/
 
-3) Enfim para executar a automação é só rodar o comando 'cucumber' para executar todos os cenários ou também o comando 'cucumber -t<@cenário_da_feature>' para rodar algum cenário separado como no exemplo abaixo:
+3) Enfim para executa a automação é só executar o comando 'cucumber' para rodar todos os cenários ou também cucumber -t<@cenário_da_feature> para rodar alguma cenário separado
 ```shell
-    cucumber -t@login
+    cucumber
 ```
-![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/ba09f8f1-ec4b-46c9-aa68-64a29647f3e9)
 
 
+### Drivers: ###
+Install and include in PATH
+- [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
+- [phantomjs](http://phantomjs.org/)
+- [internetExplorerDriver](http://www.seleniumhq.org/download/)
+- [Firefox Geckodriver](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver)
+
+Install [Webdriver Safari extension](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
 
 
-### Executando testes em modo headless ###
-Para executar os cenários em modo headless onde vamos abrir sessões em segundo plano sem a necessidade de abrir o navegador devemos seguir o que está configurado no arquivo cucumber.yml:
-
-![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/d833c791-5a2e-4ba4-95d7-6e6d0153db52)
-
-Nesse exemplo é só rodar com os parâmetros -p hmg -p headless, onde 'hmg' se refere ao que está descrito no arquivo hmg.yml (homologação) dentro de /support/config
+### Run tests in DEV with Chrome###
+Type this in the tests folder:
 ```shell
-cucumber -t@login -p hmg -p headless
+bundle exec cucumber  -p ci -p html -p headless -p dev
 ```
-![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/017c5ded-3f98-43d6-94c9-519a120beec2)
 
-### Analisando relatório ###
+### Run tests in DEV with headless###
+Type this in the tests folder:
+```shell
+bundle exec cucumber  -p ci -p html -p headless -p dev
+```
 
-Temos como acompanhar o relatório de andamento dos testes para ver o que passou e o que falhou. O arquivo .html se encontra em /results/report.html
+### Run tests in HMG with Chrome###
+Type this in the tests folder:
+```shell
+bundle exec cucumber -p pretty -p html -p no_headless -p hmg
+```
 
-![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/758d0fc3-faf7-4397-91ad-316f6e06781e)
- 
+### Run tests in HMG with headless###
+Type this in the tests folder:
+```shell
+bundle exec cucumber -p ci -p html -p headless -p hmg
+```
 
-![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/90c7c3b4-484a-467b-8620-28780022cece)
-
-### Evidências dos testes ###
-
-Após a execução dos testes podemos ter acesso as evidências das telas, elas ficarão dentro das pastas /results/test_failed ou /results/test_passed
+### Run with tags###
+Type this in the tests folder:
+```shell
+bundle exec cucumber --tags @run
+```

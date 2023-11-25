@@ -1,7 +1,7 @@
 class Login < SitePrism::Page
     element :link_login, "#login2"
-    element :field_username, "#loginusername"
-    element :field_password, "#loginpassword"
+    element :field_login_username, "#loginusername"
+    element :field_login_password, "#loginpassword"
 
     def click_link_log_in
         link_login.click
@@ -12,8 +12,8 @@ class Login < SitePrism::Page
     end
 
     def login_authentication
-        field_username.set "thiagoqa"
-        field_password.set "thiagoqa"
+        field_login_username.set "thiagoqa"
+        field_login_password.set "thiagoqa"
         find(".btn.btn-primary").click
     end
 end
