@@ -2,8 +2,6 @@
 .byebug_history
 results/screenshots/test_failed/*
 results/screenshots/test_passed/*
-results/report.html
-results/report.json
 vendor
 *.html
 *.png
