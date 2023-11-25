@@ -59,58 +59,62 @@ ruby 3.0.6p216 (2023-03-30 revision 23a532679b) [x86_64-linux]
 1) Após a instalação do ruby vamos na pasta do projeto e executamos o comando 'bundle' para instalação das dependências dele na máquina, veja o exemplo abaixo:
 ```shell
 ~/Desktop/ruby_demoblazer$ bundle
-Using public_suffix 5.0.4
-Using addressable 2.8.5
+Fetching gem metadata from http://rubygems.org/.........
+Resolving dependencies...
 Using ast 2.4.2
-Using builder 3.2.4
-Using bundler 2.1.4
-Using byebug 11.1.3
 Using mini_mime 1.1.5
-Using mini_portile2 2.8.5
+Using bundler 2.2.33
 Using racc 1.7.3
-Using nokogiri 1.15.5 (x86_64-linux)
+Using mini_portile2 2.8.5
+Using public_suffix 5.0.4
+Using builder 3.2.4
+Fetching matrix 0.4.2
+Using byebug 11.1.3
+Using cucumber-cucumber-expressions 17.0.1
+Using diff-lcs 1.5.0
 Using rack 3.0.8
+Using regexp_parser 2.8.2
+Using cucumber-ci-environment 9.2.0
+Using multi_test 1.1.0
+Using language_server-protocol 3.17.0.3
+Using rainbow 3.1.1
+Using cucumber-tag-expressions 5.0.6
+Using ffi 1.16.3
+Using json 2.6.3
+Using unicode-display_width 2.5.0
+Using cucumber-messages 22.0.0
+Using rexml 3.2.6
+Fetching site_prism-all_there 2.0.2
+Using ruby-progressbar 1.13.0
+Using nokogiri 1.15.5 (x86_64-linux)
+Using addressable 2.8.5
+Using websocket 1.2.10
+Using syntax 1.2.2
+Using rspec-support 3.12.1
+Using parallel 1.23.0
+Using rubyzip 2.3.2
 Using rack-test 2.1.0
 Using xpath 3.2.0
-Using capybara 3.2.1
-Using childprocess 3.0.0
-Using concurrent-ruby 1.2.2
-Using cucumber-ci-environment 9.2.0
-Using cucumber-messages 22.0.0
-Using cucumber-gherkin 26.2.0
-Using cucumber-tag-expressions 5.0.6
-Using cucumber-core 12.0.0
-Using cucumber-cucumber-expressions 17.0.1
-Using cucumber-html-formatter 20.4.0
-Using diff-lcs 1.5.0
-Using multi_test 1.1.0
-Using ffi 1.16.3
 Using sys-uname 1.2.3
-Using cucumber 9.1.0
-Using i18n 1.14.1
-Using faker 3.2.2
-Using json 2.6.3
-Using language_server-protocol 3.17.0.3
-Using parallel 1.23.0
+Using rspec-mocks 3.12.6
+Using cucumber-html-formatter 20.4.0
 Using parser 3.2.2.4
-Using rainbow 3.1.1
-Using regexp_parser 2.8.2
-Using rexml 3.2.6
-Using rspec-support 3.12.1
 Using rspec-core 3.12.2
 Using rspec-expectations 3.12.3
-Using rspec-mocks 3.12.6
-Using rspec 3.12.0
 Using rubocop-ast 1.30.0
-Using ruby-progressbar 1.13.0
-Using unicode-display_width 2.5.0
+Using cucumber-gherkin 26.2.0
+Using selenium-webdriver 4.15.0
+Using cucumber-core 12.0.0
+Using rspec 3.12.0
 Using rubocop 1.57.2
-Using rubyzip 2.3.2
-Using selenium-webdriver 3.142.7
-Using site_prism 2.15.1
-Using syntax 1.2.2
-Bundle complete! 9 Gemfile dependencies, 50 gems now installed.
-Use `bundle info [gemname]` to see where a bundled gem is installed.
+Using cucumber 9.1.0
+Installing site_prism-all_there 2.0.2
+Installing matrix 0.4.2
+Fetching capybara 3.39.2 (was 3.2.1)
+Installing capybara 3.39.2 (was 3.2.1)
+Fetching site_prism 4.0.3 (was 2.15.1)
+Installing site_prism 4.0.3 (was 2.15.1)
+Bundle updated!
 ```
 
 2) Devemos deixar baixar também a o chromedriver no site https://chromedriver.chromium.org/downloads, após descompactar o arquivo deverá ficar na pasta /usr/local/bin/
