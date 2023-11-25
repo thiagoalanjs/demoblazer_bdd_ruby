@@ -123,42 +123,27 @@ Use `bundle info [gemname]` to see where a bundled gem is installed.
 
 
 
-### Drivers: ###
-Install and include in PATH
-- [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
-- [phantomjs](http://phantomjs.org/)
-- [internetExplorerDriver](http://www.seleniumhq.org/download/)
-- [Firefox Geckodriver](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver)
 
-Install [Webdriver Safari extension](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
+### Executando testes em modo headless###
+Para executar os cenários em modo headless onde vamos abrir sessões em segundo plano sem a necessidade de abrir o navegador devemos seguir o que está configurado no arquivo cucumber.yml:
 
+![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/d833c791-5a2e-4ba4-95d7-6e6d0153db52)
 
-### Run tests in DEV with Chrome###
-Type this in the tests folder:
+Nesse exemplo é só rodar com os parâmetros -p hmg -p headless, onde 'hmg' se refere ao que está descrito no arquivo hmg.yml dentro de /support/config
 ```shell
-bundle exec cucumber  -p ci -p html -p headless -p dev
+cucumber -t@login -p hmg -p headless
 ```
+![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/017c5ded-3f98-43d6-94c9-519a120beec2)
 
-### Run tests in DEV with headless###
-Type this in the tests folder:
-```shell
-bundle exec cucumber  -p ci -p html -p headless -p dev
-```
+### Analisando relatório ###
 
-### Run tests in HMG with Chrome###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p pretty -p html -p no_headless -p hmg
-```
+Temos como acompanhar o relátório de andamento dos testes para ver o que passou e o que falhou. O arquivo .html se encontra em /results/report.html
 
-### Run tests in HMG with headless###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p ci -p html -p headless -p hmg
-```
+![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/758d0fc3-faf7-4397-91ad-316f6e06781e)
+ 
 
-### Run with tags###
-Type this in the tests folder:
-```shell
-bundle exec cucumber --tags @run
-```
+![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/90c7c3b4-484a-467b-8620-28780022cece)
+
+### Evidências dos testes ###
+
+Após a execução dos testes podemos ter acesso as evidências das telas, elas ficarão dentro das pastas /results/test_failed ou /results/test_passed
