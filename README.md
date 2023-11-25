@@ -115,10 +115,12 @@ Use `bundle info [gemname]` to see where a bundled gem is installed.
 
 2) Devemos deixar baixar também a o chromedriver no site https://chromedriver.chromium.org/downloads, após descompactar o arquivo deverá ficar na pasta /usr/local/bin/
 
-3) Enfim para executa a automação é só executar o comando 'cucumber' para rodar todos os cenários ou também cucumber -t<@cenário_da_feature> para rodar alguma cenário separado
+3) Enfim para executar a automação é só roda o comando 'cucumber' para rodar todos os cenários ou também cucumber -t<@cenário_da_feature> para rodar algum cenário separado como no exemplo abaixo
 ```shell
-    cucumber
+    cucumber -t@login
 ```
+![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/ba09f8f1-ec4b-46c9-aa68-64a29647f3e9)
+
 
 
 ### Drivers: ###
