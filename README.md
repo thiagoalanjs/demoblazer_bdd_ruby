@@ -1,12 +1,20 @@
 ## Projeto de automação de teste com Ruby, Cucumber e o framework capybara ##
 
+Esse repositório contém um projeto de automação de testes que roda 3 features no site https://www.demoblaze.com/, são elas:
+
+1) "criacao_conta.feature" - testes realizados na sessão  'Sign Up' 
+2) "carrinho_compras.feature" - testes na funcionalidade do carrinho de compras
+3) "login.feature" - testes realizados na tela de login contendo cenários positivos e negativos.
 
 ### Instalação do ruby e dependências no Windows ###
 
-Seguir o passo a passo: 
-```shell
+Seguir o passo a passo nos tutoriais
+
 https://ftstblog.wordpress.com/2018/03/27/cucumber-configuracao-windows/
-```
+
+OU também:
+
+https://papito.medium.com/instalando-ruby-cucumber-e-capybara-no-windows-10-acb1fe833a95
 
 ### Instalação do Rbenv e dependências no Ubuntu ou qualquer outro baseado no Debian ###
 
@@ -117,50 +125,16 @@ Installing site_prism 4.0.3 (was 2.15.1)
 Bundle updated!
 ```
 
-2) Devemos deixar baixar também a o chromedriver no site https://chromedriver.chromium.org/downloads, após descompactar o arquivo deverá ficar na pasta /usr/local/bin/
+2) Devemos baixar também o chromedriver no site https://chromedriver.chromium.org/downloads, após descompactar o arquivo deverá ficar na pasta /usr/local/bin/
 
-3) Enfim para executa a automação é só executar o comando 'cucumber' para rodar todos os cenários ou também cucumber -t<@cenário_da_feature> para rodar alguma cenário separado
+3) Enfim para executar a automação é só executar o comando 'cucumber' para rodar todos os cenários ou também cucumber -t<@cenário_da_feature> para rodar alguma cenário separado
 ```shell
-    cucumber
+    cucumber -t@login
 ```
+![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/b19ec85c-a648-4cfa-8bc5-f981c518a376)
 
+#### Analisando o relatório de testes ####
 
-### Drivers: ###
-Install and include in PATH
-- [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
-- [phantomjs](http://phantomjs.org/)
-- [internetExplorerDriver](http://www.seleniumhq.org/download/)
-- [Firefox Geckodriver](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette/WebDriver)
+Para ver o relatório de testes e checar os cenários que passaram ou não é só abrir o arquivo report.html que está está na pasta /result :
 
-Install [Webdriver Safari extension](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
-
-
-### Run tests in DEV with Chrome###
-Type this in the tests folder:
-```shell
-bundle exec cucumber  -p ci -p html -p headless -p dev
-```
-
-### Run tests in DEV with headless###
-Type this in the tests folder:
-```shell
-bundle exec cucumber  -p ci -p html -p headless -p dev
-```
-
-### Run tests in HMG with Chrome###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p pretty -p html -p no_headless -p hmg
-```
-
-### Run tests in HMG with headless###
-Type this in the tests folder:
-```shell
-bundle exec cucumber -p ci -p html -p headless -p hmg
-```
-
-### Run with tags###
-Type this in the tests folder:
-```shell
-bundle exec cucumber --tags @run
-```
+![image](https://github.com/thiagoalanjs/demoblazer_bdd_ruby/assets/32438113/26c72f6c-59c8-4c4f-a399-a87aa666045a)
